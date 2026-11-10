@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a1628;
+  --bg-gradient: linear-gradient(180deg, #0a1628 0%, #0d1b2f 58%, #101f35 100%);
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-strong: rgba(255, 255, 255, 0.10);
+  --surface-muted: #131f30;
+  --ink: #f0f6ff;
+  --ink-2: #c8d9f0;
+  --muted: #7a9bbf;
+  --subtle: #4e6a85;
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(172, 198, 233, 0.40);
+  --accent: #acc6e9;
+  --accent-hover: #c8dbf5;
+  --focus: #5b8ec7;
+  --success: #7dd898;
+  --danger: #f06b7a;
+  --warning: #f5c97a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100dvh;
+  background: var(--bg-gradient);
+  color: var(--ink);
+}
+
+.display {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', Menlo, monospace;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
+
+/* ConnectKit modal dark override */
+[data-rk], .ck-modal { font-family: 'DM Sans', sans-serif !important; }
